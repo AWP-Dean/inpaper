@@ -1,2 +1,2 @@
 pyinstaller -F -w Frame.py -p function.py -p logger.py -p rxls.py -p w2accdb.py
--p w2xls.py -p C:\Users\Administrator\PycharmProjects\来文阅办信息化管理系统\venv\Lib\site-packages
+-p w2xls.py -p C:\Users\Administrator\PycharmProjects\inpaper\venv\Lib\site-packages
