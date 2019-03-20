@@ -9,7 +9,7 @@ import logger
 
 def withmeeting(list):
 	logger.loggerprint("有会议，写入xls，开始")
-	rb = xlrd.open_workbook('A:\\来文来电\\2019.xls', formatting_info=True)
+	rb = xlrd.open_workbook(r"C:\Users\Administrator\Desktop\来文来电\2019.xls", formatting_info=True)
 	wb = copy(rb)
 	ws = wb.add_sheet('2019-' + str(list[0]))
 
@@ -177,13 +177,13 @@ def withmeeting(list):
 	ws.write(11, 0, ' 省总工会办公室', black_left_nowrap_nobord_style)  # 5个空格
 	ws.write(11, 3, '        承办人：张  腾', black_left_nowrap_nobord_style)
 
-	wb.save('A:\\来文来电\\2019.xls')
+	wb.save(r"C:\Users\Administrator\Desktop\来文来电\2019.xls")
 	logger.loggerprint("有会议，写入xls，完毕")
 
 def withoutmeeting(list):
 
 	logger.loggerprint("无会议，写入xls，开始")
-	rb = xlrd.open_workbook('A:\\来文来电\\2019.xls', formatting_info=True)
+	rb = xlrd.open_workbook(r"C:\Users\Administrator\Desktop\来文来电\2019.xls", formatting_info=True)
 	wb = copy(rb)
 	ws = wb.add_sheet('2019-' + str(list[0]))
 
@@ -344,7 +344,7 @@ def withoutmeeting(list):
 	ws.write(10, 0, ' 省总工会办公室', black_left_nowrap_nobord_style)  # 5个空格
 	ws.write(10, 3, '        承办人：张  腾', black_left_nowrap_nobord_style)
 
-	wb.save('A:\\来文来电\\2019.xls')
+	wb.save(r"C:\Users\Administrator\Desktop\来文来电\2019.xls")
 	logger.loggerprint("无会议，写入xls，完毕")
 
 def tempfilewithmeeting(list):

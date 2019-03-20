@@ -5,7 +5,7 @@ import logger
 
 def mess(str):
 	logger.loggerprint("开始读取xls，获取信息")
-	wb = xlrd.open_workbook("A:\\来文来电\\2019.xls")
+	wb = xlrd.open_workbook(r"C:\Users\Administrator\Desktop\来文来电\2019.xls")
 	ws = wb.sheet_by_name(str)
 	#print(wb.sheet_names())
 	list = []
@@ -43,7 +43,7 @@ def getno():
 
 def getsheets():
 
-	wb = xlrd.open_workbook("A:\\来文来电\\2019.xls")
+	wb = xlrd.open_workbook(r"C:\Users\Administrator\Desktop\来文来电\2019.xls")
 	list = wb.sheet_names()
 	logger.loggerprint("获取sheet列表，getsheets（）是：")
 	logger.loggerprint(list)

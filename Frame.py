@@ -116,16 +116,18 @@ class App(object):
 		def message(str):
 			tkinter.messagebox.showinfo('提示', str)
 
+		"""
 		def scanview():
 			logger.loggerprint('进入扫描件预览功能，scanview（）')
 			im.destroy()
-			scanfile = Image.open(r'C:\Users\Administrator\Desktop\HP0003.jpg')
+			scanfile = Image.open('C:\\Users\\Administrator\\Desktop\\HP0003.jpg')
 			resized_scanfile = function.resize(360, 420, scanfile)
 			show_scanfile = ImageTk.PhotoImage(resized_scanfile)
 			img = Label(self.inpaperFrame, image=show_scanfile, width=360, height=420)
 			img.image = show_scanfile  # 因为缺这么一个死活不出来，麻辣隔壁，上面那一句的image=img还得在，原理不知道，马勒戈壁
 			img.place(x=400, y=0)
-			logger.loggerprint('完成扫描件预览功能，scanview（）')
+			logger.loggerprint('完成扫描件预览功能，scanview（）')		
+		"""
 
 		def sort():
 			logger.loggerprint('进入查询功能，sort（）')
@@ -137,7 +139,7 @@ class App(object):
 			list = rxls.mess(sortstr)
 			logger.loggerprint('查询到的信息是：')
 			logger.loggerprint(list)
-			scanview()
+			#scanview()
 			if len(list) == 8:
 				aptnameEntry.insert(0, list[0])
 				timeEntry.insert(0, list[1])

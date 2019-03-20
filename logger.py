@@ -3,7 +3,7 @@
 import function
 
 def loggerprint(str):
-	filepath = 'A:\\来文来电\\logger\\'
+	filepath = r'C:\Users\Administrator\Desktop\来文来电\\logger'
 	filename = function.time1() + '.txt'
 	log = open(filepath + filename, 'a',newline='')
 	print(function.currenttime(), file=log)

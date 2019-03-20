@@ -6,7 +6,7 @@ import logger
 
 def insert(list):
 	logger.loggerprint("写入access数据库，开始")
-	db = 'Driver={Microsoft Access Database (*.mdb,*.accdb)};DBQ=A:\\来文来电\\2019.mdb'
+	db = 'Driver={Microsoft Access Database (*.mdb,*.accdb)};DBQ=C:\\Users\\Administrator\\Desktop\\来文来电\\2019.mdb'
 	conn = pypyodbc.win_connect_mdb(db)
 	curser = conn.cursor()
 	sql_insert = '''INSERT INTO 2019(ID,来文单位,来文日期,来文名称,主要内容) VALUES(?,?,?,?,?)'''
